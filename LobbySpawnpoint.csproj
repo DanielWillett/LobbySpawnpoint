@@ -7,17 +7,19 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <Company>Uncreated Network</Company>
     <Authors>Daniel Willett</Authors>
-    <Version>$(VersionPrefix)</Version>
+    <Version>1.1.0.0</Version>
     <Description>Spawn players at a configable point on their first join.</Description>
     <PackageProjectUrl>https://github.com/DanielWillett/LobbySpawnpoint</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/DanielWillett/LobbySpawnpoint</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Unturned Plugin;RocketMod4</PackageTags>
-    <PackageReleaseNotes>V1.0 - Added PlayerSaver to save players that have already joined. Added /lobbyset to set the spawnpoint for new players. Added /lobbytp to teleport to the spawnpoint for new players. Added translations for both commands.</PackageReleaseNotes>
+    <PackageReleaseNotes>V1.1 - Redid the read function to read the whole file at once, possibly removing the error `System.ArgumentException: Reading would over run buffer` error.</PackageReleaseNotes>
     <NeutralLanguage>en-US</NeutralLanguage>
     <SignAssembly>False</SignAssembly>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
