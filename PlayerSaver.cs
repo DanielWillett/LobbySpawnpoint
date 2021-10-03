@@ -9,17 +9,18 @@ namespace LobbySpawnpoint
         public ulong[] PrevOnline;
         public void Read()
         {
-            using (FileStream stream = File.Open(FILE_LOCATION, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read))
+            byte[] file = File.ReadAllBytes(FILE_LOCATION);
+            if (file.Length % sizeof(ulong) != 0)
             {
-                long amt = stream.Length / sizeof(ulong);
-                PrevOnline = new ulong[amt];
-                byte[] buffer = new byte[sizeof(ulong)];
-                for (int i = 0; i < amt; i++)
-                {
-                    int start = i * sizeof(ulong);
-                    stream.Read(buffer, start, sizeof(ulong));
-                    PrevOnline[i] = BitConverter.ToUInt64(buffer, start);
-                }
+                Rocket.Core.Logging.Logger.LogWarning($"Detected corrupted player save file, size " +
+                    $"{file.Length} bytes should be divisible by {sizeof(ulong)} bytes.");
+            }
+            int amt = file.Length;
+            PrevOnline = new ulong[amt];
+            for (int i = 0; i < amt; i++)
+            {
+                int start = i * sizeof(ulong);
+                PrevOnline[i] = BitConverter.ToUInt64(file, start);
             }
         }
         public void TryAdd(ulong id)
