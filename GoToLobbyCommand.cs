@@ -22,7 +22,7 @@ namespace LobbySpawnpoint
                 LobbySpawnpoint.I.Configuration.Instance.Y, 
                 LobbySpawnpoint.I.Configuration.Instance.Z), 
                 LobbySpawnpoint.I.Configuration.Instance.Yaw);
-            ChatManager.say(LobbySpawnpoint.I.Translate("spawnpoint_teleported",
+            ChatManager.say(player.CSteamID, LobbySpawnpoint.I.Translate("spawnpoint_teleported",
                 player.Player.transform.position.x.ToString("N1"),
                 player.Player.transform.position.y.ToString("N1"),
                 player.Player.transform.position.z.ToString("N1"),

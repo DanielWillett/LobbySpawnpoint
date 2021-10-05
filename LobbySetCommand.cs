@@ -21,7 +21,7 @@ namespace LobbySpawnpoint
             LobbySpawnpoint.I.Configuration.Instance.Z = player.Player.transform.position.z;
             LobbySpawnpoint.I.Configuration.Instance.Yaw = player.Player.transform.rotation.eulerAngles.y;
             LobbySpawnpoint.I.Configuration.Instance.SetUp = true;
-            ChatManager.say(LobbySpawnpoint.I.Translate("spawnpoint_set",
+            ChatManager.say(player.CSteamID, LobbySpawnpoint.I.Translate("spawnpoint_set",
                 player.Player.transform.position.x.ToString("N1"),
                 player.Player.transform.position.y.ToString("N1"),
                 player.Player.transform.position.z.ToString("N1"),
