@@ -9,6 +9,11 @@ namespace LobbySpawnpoint
         public ulong[] PrevOnline;
         public void Read()
         {
+            if (!File.Exists(FILE_LOCATION))
+            {
+                PrevOnline = new ulong[0];
+                return;
+            }
             byte[] file = File.ReadAllBytes(FILE_LOCATION);
             if (file.Length % sizeof(ulong) != 0)
             {
