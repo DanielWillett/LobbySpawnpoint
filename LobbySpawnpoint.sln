@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31717.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LobbySpawnpoint", "LobbySpawnpoint.csproj", "{FA03CBC6-9142-470A-A1B5-ACF9F5E1394A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LobbySpawnpoint", "LobbySpawnpoint.csproj", "{FA03CBC6-9142-470A-A1B5-ACF9F5E1394A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LobbySpawnpoint.Tests", "LobbySpawnpoint.Tests\LobbySpawnpoint.Tests.csproj", "{C54482BB-3516-4860-A8E0-0A83A9450A7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FA03CBC6-9142-470A-A1B5-ACF9F5E1394A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA03CBC6-9142-470A-A1B5-ACF9F5E1394A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA03CBC6-9142-470A-A1B5-ACF9F5E1394A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54482BB-3516-4860-A8E0-0A83A9450A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54482BB-3516-4860-A8E0-0A83A9450A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54482BB-3516-4860-A8E0-0A83A9450A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54482BB-3516-4860-A8E0-0A83A9450A7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
