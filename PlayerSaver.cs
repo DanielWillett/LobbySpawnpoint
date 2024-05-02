@@ -215,18 +215,18 @@ public class PlayerSaver
             return default;
         }
     }
-    private static unsafe ArraySegment<ulong> ReadBinary(byte firstByte, Stream stream)
+    private unsafe ArraySegment<ulong> ReadBinary(byte firstByte, Stream stream)
     {
         long fileLength = stream.Length;
         if (fileLength % 8 != 0)
         {
-            //Logger.LogWarning($"Detected corrupted player save file, size {fileLength} bytes should be divisible by {sizeof(ulong)} bytes. There may be missing players.");
+            _plugin.LogWarning($"Detected corrupted player save file, size {fileLength} bytes should be divisible by {sizeof(ulong)} bytes. There may be missing players.");
         }
 
         long playerCount = fileLength / sizeof(ulong);
         if (playerCount > int.MaxValue)
         {
-            //Logger.LogWarning($"Too many players defined in save file ({playerCount}), check that it did not get corrupted.");
+            _plugin.LogWarning($"Too many players defined in save file ({playerCount}), check that it did not get corrupted.");
             return default;
         }
 
